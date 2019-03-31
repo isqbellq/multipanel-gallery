@@ -1,92 +1,91 @@
-	@import url('https://fonts.googleapis.com/css?family=Happy+Monkey');
-	
+@import url('https://fonts.googleapis.com/css?family=Happy+Monkey');
 
-	html {
-		box-sizing: border-box;
-		background: #222;
-		font-size: 20px;
-		font-weight: 200;
-		font-family: 'Happy Monkey', cursive;
-		text-shadow: 1px 6px 19px rgba(34,34,34,0.98);
-	}
-	body {
-		margin: 0;
-	}
-	*, *:before, *:after{
-		box-sizing: inherit;
-	}
+html {
+	box-sizing: border-box;
+	background: #222;
+	font-size: 20px;
+	font-weight: 200;
+	font-family: 'Happy Monkey', cursive;
+	text-shadow: 1px 6px 19px rgba(34,34,34,0.98);
+}
+body {
+	margin: 0;
+}
+*, *:before, *:after{
+	box-sizing: inherit;
+}
 
-	.panels {
-		min-height: 100vh;
-		overflow: hidden;
-		display: flex;
-	}
+.panels {
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+}
 
-	.panel {
-		background: #eee;
-		box-shadow: inset 0 0 0 5px rgba(0,0,0,0.2);
-		color: #ddd;
-		text-align: center;
-		align-items: center;
-		transition: font-size 0.6s cubic-bezier(0.61,-0.19, 0.7,-0.11), flex 0.6s cubic-bezier(0.61,-0.19, 0.7,-0.11), background 0.2s;
-		font-size: 20px;
-		background-size: cover;
-		background-position: center;
-		flex: 1;
-		justify-content: center;
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-	}
+.panel {
+	background: #eee;
+	box-shadow: inset 0 0 0 5px rgba(0,0,0,0.2);
+	color: #ddd;
+	text-align: center;
+	align-items: center;
+	transition: font-size 0.6s cubic-bezier(0.61,-0.19, 0.7,-0.11), flex 0.6s cubic-bezier(0.61,-0.19, 0.7,-0.11), background 0.2s;
+	font-size: 20px;
+	background-size: cover;
+	background-position: center;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
 
-	.panel1 {
-		background-image: url(https://images.unsplash.com/photo-1526080676457-4544bf0ebba9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
-	}
-	.panel2 {
-		background-image: url(https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80);
-	}
-	.panel3 {
-		background-image: url(https://images.unsplash.com/photo-1524654458049-e36be0721fa2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
-	}
-	.panel4 {
-		background-image: url(https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1162&q=80);
-	}
-	.panel5 {
-		background-image: url(https://images.unsplash.com/photo-1518699086072-d567cb15b483?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
-	}
+.panel1 {
+	background-image: url(https://images.unsplash.com/photo-1526080676457-4544bf0ebba9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+}
+.panel2 {
+	background-image: url(https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80);
+}
+.panel3 {
+	background-image: url(https://images.unsplash.com/photo-1524654458049-e36be0721fa2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+}
+.panel4 {
+	background-image: url(https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1162&q=80);
+}
+.panel5 {
+	background-image: url(https://images.unsplash.com/photo-1518699086072-d567cb15b483?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+}
 
-	.panel > * {
-		margin: 0;
-		width: 100%;
-		transition: transform 0.5s;
-		flex: 1 0 auto;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+.panel > * {
+	margin: 0;
+	width: 100%;
+	transition: transform 0.5s;
+	flex: 1 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
-	.panel > *:first-child {
-		transform: translateY(-100%);
-	}
-	.panel.open-active > *:first-child {
-		transform: translateY(0);
-	}
-	.panel > *:last-child {
-		transform: translateY(100%);
-	}
-	.panel.open-active > *:last-child {
-		transform: translateY(0);
-	}
+.panel > *:first-child {
+	transform: translateY(-100%);
+}
+.panel.open-active > *:first-child {
+	transform: translateY(0);
+}
+.panel > *:last-child {
+	transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+	transform: translateY(0);
+}
 
-	.panel p {
-		text-transform: uppercase;
-		font-size: 2em;
-	}
-	.panel p:nth-child(2) {
-		font-size: 2.5em;
-	}
+.panel p {
+	text-transform: uppercase;
+	font-size: 2em;
+}
+.panel p:nth-child(2) {
+	font-size: 2.5em;
+}
 
-	.panel.open {
-		font-size: 40px;
-		flex: 5;
-	}
+.panel.open {
+	font-size: 40px;
+	flex: 5;
+}
